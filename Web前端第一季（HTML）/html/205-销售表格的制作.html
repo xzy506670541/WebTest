@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我是标题</title>	
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<!-- utf-8 gbk gb2012 -->
+</head>
+<body>
+
+<table border="1px" width="500px" align="center" height="200px"> 
+<tr><!-- col=column行合并 -->
+	<td colspan="2"><!--colspan"列合并，合并2列，被合并的内容一定要删除 -->内容</td><td>内容</td><td>内容</td><td>内容</td>
+</tr>
+<tr>
+	<td rowspan="2"><!-- rowspan:行合并.一定要将被合并的删除，否则会造成多余 -->内容</td><td>内容</td><td colspan="2" rowspan="2" >内容</td><td>内容</td>
+</tr>
+<tr>
+	<td>内容</td><td>内容</td>
+</tr>
+<tr>
+	<td>内容</td><td>内容</td><td>内容</td><td>内容</td><td>内容</td>
+</tr>
+
+</table>
+
+
+</body>
+</html>
