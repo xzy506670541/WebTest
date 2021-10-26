@@ -1,0 +1,14 @@
+<html>
+	<frameset rows="25%,*">
+	<!-- 
+	1.frameset元素可定义一个框架集。它被用来组织多个窗口（框架）。每个框架存有独立的文档。在其最简单的应用中，frameset元素仅仅会规定在框架集中存在多少列或多少行。您必须使用cols 或 rows 属性。
+	2. rows="25%,75%":上部分是占据四分之一，下部分占据四分之三
+	-->
+		<frame src="401-2-frame-a.html" name="top"/>
+			
+			<frameset cols="25%,*">  
+				<frame src="401-2-frame-b.html" name="2"/>
+				<frame src="401-2-frame-c.html" name="3"/>
+			</frameset>
+	</frameset>
+</html>
