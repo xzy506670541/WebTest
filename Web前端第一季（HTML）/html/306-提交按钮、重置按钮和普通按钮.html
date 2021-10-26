@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我是标题</title>	
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<!-- utf-8 gbk gb2012 -->
+</head>
+<body>
+
+<!-- <table> 标签定义 HTML 表格。简单的 HTML 表格由 table 元素以及一个或多个 tr、th 或 td 元素组成。tr 元素定义表格行，th 元素定义表头，td 元素定义表格单元。更复杂的 HTML 表格也可能包括 caption、col、colgroup、thead、tfoot 以及 tbody 元素。 -->
+<!--<form> 标签用于为用户输入创建 HTML 表单。表单能够包含 input 元素，比如文本字段、复选框、单选框、提交按钮等等。表单还可以包含 menus、textarea、fieldset、legend 和 label 元素。表单用于向服务器传输数据。 -->
+<!-- <input> 标签用于搜集用户信息。根据不同的 type 属性值，输入字段拥有很多种形式。输入字段可以是文本字段、复选框、掩码后的文本控件、单选按钮、按钮等等。
+type="text":类型为文本
+name="username"：发给服务端时候，让服务端知道文本的名字是什么；
+value="xzy"：此文本默认值
+maxlength="7":文本内容最长7个数量，中文也是不能超过7个。
+placeholder="请输入你的用户名"，和value="xzy"会冲突，俩个只能用一个，默认使用value
+ -->
+<form>
+<table><!-- 向服务器传递数值：username=XXXXXXX password=xxxxxx  sex=man hobby=1234  -->  
+	<tr>
+		<!-- <td>账号</td><td><input type="text" name="username" value="xzy" maxlength="7" placeholder="请输入你的用户名"/></td> -->
+		<td>账号</td><td><input type="text" name="username" maxlength="7" placeholder="请输入你的用户名" value="xzy"/></td>
+	</tr>
+	<tr>
+		<!-- <td>密码</td><td><input type="password" value="123" /></td> -->
+		<td>密码</td><td><input type="password" name="password" placeholder="请输入你的密码" /></td>
+	</tr>
+	<tr>
+		<td>确认密码</td><td><input type="password" name="repassword" placeholder="请输入你的密码" /></td>
+	</tr>	
+	<tr>
+		<td>性别</td> <td>男<input type="radio" name="sex" value="man" checked="true"/>  女<input type="radio" name="sex" value="woman"/>  不男不女<input type="radio" name="sex" value="manwoman"/>  </td>
+	</tr>
+	<tr>
+		<td>是否是中国人</td> <td>是<input type="radio" name="isChinese" value="true" checked="true"/>  不是<input type="radio" name="isChinese" value="false"/>   </td>
+	</tr>	
+	
+	<tr>
+		<td>爱好 </td><td > 读书<input type="checkbox" name="hobby" value="1" checked >  游泳<input type="checkbox" name="hobby"  value="2">  篮球<input type="checkbox" name="hobby"  value="3" ></td>
+	<tr>
+		
+	<tr><td colspan="2" align="center"><input type="button" value="我是普通按钮功能可以自定义"><input type="reset" name="reset"  value="设置为默认"><input type="submit" name="register" value="注册"></td> </tr>
+</table>
+
+</form>
+
+</body>
+</html>
