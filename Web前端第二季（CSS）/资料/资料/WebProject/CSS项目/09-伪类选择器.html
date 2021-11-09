@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*a{
+				color:green;
+			}*/
+			
+			a:link{
+				color:yellow;
+			}
+			a:visited{
+				color:burlywood;
+			}
+			a:hover{
+				color:red;
+				font-size: 30px;
+			}
+			a:active{
+				color:green;
+				font-size: 10px;
+			}
+			.one:link{
+				color:blue;
+				font-size: 12px;
+			}
+			.one:visited{
+				color:pink;
+				font-size:10px;
+			}
+			img:hover{
+				width: 300px;
+			}
+			img:active{
+				width: 200px;
+			}
+			
+			/*div:first-child{
+				color:blue;
+			}
+			span:first-child{
+				color:green;
+			}*/
+			.one{
+				color:blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div>我是body的第一个孩子</div>
+		<!--1,正常状态，2，鼠标移上 3，鼠标按下，不抬起 4，被点击过，被打开过-->
+		<a href="http://www.baidu.com">GoTo百度</a>
+		<a href="http://www.sikiedu.com?232343434" class="one">SiKi学院</a>
+		<a href="http://www.taobao.com">淘宝</a>
+		<img src="img/640.jpg" />
+		<div class="one"> 
+			<span>我是第1个孩子<span>我是第1个孙子</span></span>
+			<span>我是第2个孩子</span> 
+		</div>
+	</body>
+</html>

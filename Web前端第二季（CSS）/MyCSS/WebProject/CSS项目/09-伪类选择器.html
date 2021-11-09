@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<style type="text/css">
+			/* 选择器：对所有连接进行处理 ，但是点击了也没有变化*/
+			/* a{color: #7FFFD4;} */			
+			
+			/* 正常状态 */
+						a:link {
+							color: #A52A2A;
+						}
+			
+						/* 被点击过，被打开过 */
+						a:visited {
+							color: #7FFFD4;
+						}
+			
+						/* 鼠标聚焦 */
+						a:hover {
+							color: chartreuse;
+							font-size: 30px;
+						}
+			
+						/* 鼠标按下，不抬起 */
+						a:active {
+							color: #7FFF00;
+							font-size: 10px;
+						}
+						
+						/* 伪类选择器：one类里面的没有点击状态 */
+						.one:link{
+							color: blue;
+							font-size: 12px;
+						}
+						
+						.one:hover{
+							color: #7FFF00;
+							font-size: 50px;
+						}
+						
+						/* 伪类选择器：one类里面的点击(访问)过后的状态 */
+						.one:visited{
+							color: pink;
+							font-size: 10px;
+						}
+						
+						/* 图片继续选择器 */
+						img:hover{
+							width: 600px;
+						}
+						
+						/* 图片按下 */
+						img:active{
+							width: 200px;
+						}
+						
+						/* div设置选择器 */
+						div:first-child{
+							color:blue;
+						}
+						
+						span:first-child{
+							color: #00FFFF;
+						}
+			
+			
+			/* one类选择器优先级 */
+			.one{
+				color: brown;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div>我是body的第1个孩子</div>
+		
+		<!-- 网络连接有几种状态:1.正常状态 2.鼠标聚焦 3.鼠标按下，不抬起 4.被点击过，被打开过 -->
+		<a href="http://www.baidu.com">Goto百度</a>
+		<a href="http://www.taobao.com" class="one">Goto淘宝</a>
+		<a href="http://www.jindong.com">Goto京东</a>
+		<img src="img/xzy的CSDN主页的二维码.png" >
+
+		<div class="one">
+			<span>我是第1个孩子<span>我是第1个孩子的第1个孙子</span></span>
+			<span>我是第2个孩子</span>
+		</div>
+
+	</body>
+</html>

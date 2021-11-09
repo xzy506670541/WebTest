@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<style type="text/css">
+		
+		/* div{
+			font-size: 30px;
+			color: #0000FF;
+			}
+		
+		span{
+			font-size: 30px;
+			color: #0000FF;
+			}
+		
+		p{
+			font-size: 30px;
+			color: #0000FF;
+			} */
+			
+		/* 1.群组选择器：给多个选择器设置一种样式 */
+			/* div,span,p,one,header
+			{
+				font-size: 30px;
+				color: #0000FF;
+			} */
+			 
+			 /*2. 全局选择器 */
+/* 			 *{
+				 color: #7FFFD4;
+				 font-size: 20px;
+			 } */
+		
+		/* 3.后代选择器 */
+		/* div后代p后代span */
+		/* div p span{color: brown;} */ 	
+		
+		/* 4.属性选择器 */
+		/* input{background-color: aqua;} */
+		
+		/* 只对text输入框起作用+input后面不能接空格 */
+		input [type='text']{background-color: aqua;}		
+		/* input[type='text']{background-color: aqua;} */
+		
+		</style>
+	</head>
+	<body>
+		<!-- <div>我是<p>第<span>2个</span></p>div标签里面的内容</div> -->
+		<div>我是第1个div标签里面的内容</div>
+		<div>我是第2个div标签里面的内容</div>
+		<div>我是第2个div标签里面的内容</div>
+		
+		<span>我是第1个span标签里面的内容 </span><br/>
+		<span>我是第2个span标签里面的内容 </span><br/>
+		<span>我是第3个span标签里面的内容 </span><br/>	
+		
+		<p>我是第1个p标签里面的内容 </p>
+		<p>我是第2个p标签里面的内容 </p>	
+		<p>我是第3个p标签里面的内容 </p>	
+		
+		<input type="text">	
+		<input type="password">
+	</body>
+</html>

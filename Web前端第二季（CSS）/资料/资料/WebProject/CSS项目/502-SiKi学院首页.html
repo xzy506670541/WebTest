@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin:0px;
+				padding:0px;
+				background-color: #f5f8fa;
+			}
+			.bar_menu{
+				background-color: #ffffff;
+				width:35px;
+				position: fixed;
+				top: 0px;
+				bottom:0px;
+				right:0px;
+				border-left: 1px solid aliceblue;
+			}
+			.bar_menu a{
+				display: block;
+				margin-top: 100px;
+				width: 35px;
+				text-align: center;
+				color:#616161;
+				font-size: 14px;
+				padding:20px 0px;
+			}
+			.bar_menu a:hover{
+				cursor: pointer;
+				background-color: #43bc60;
+				color:white;
+			}
+			.nav{
+				height: 56px;
+				padding: 0px 10px;
+				background-color: #212121;
+			}
+			.nav_left{
+				height: 56px;
+				float: left;
+			}
+			.nav_left img{
+				display: block;
+				float:left;
+				height: 50px;
+				margin-top: 3px;
+				margin-left: 5px;
+			}
+			.nav_left ul{
+				list-style-type: none;
+				float: left;
+				margin: 0px 0px 0px 40px;
+				padding: 0px;
+			}
+			.nav_left ul li{
+				margin: 0px 40px 0px 0px;
+				padding: 0px;
+				float: left;
+				font-size: 14px;
+				color:#c1c1c1;
+				line-height: 56px;
+			}
+			.nav_right{
+				height: 56px;
+				float:right;
+			}
+			.slider{
+				height: 451px;
+				background-color: #16232b;
+			}
+			.slider img{
+				display: block;
+				height: 451;
+				margin: 0 auto;
+			}
+			.course_list{
+				min-height: 500px;
+			}
+			.course_list h2{
+				font-size: 32px;
+				color:#313131;
+				font-weight: 500;
+				text-align: center;
+				margin-top: 50px;
+				margin-bottom: 10px;
+			}
+			.course_list h4{
+				font-size: 16px;
+				color:#919191;
+				font-weight: 400;
+				text-align: center;
+				margin-top: 0px;
+			}
+			.course_nav{
+				width: 1170px;
+				height: 80px;
+				margin: 40px auto 0;
+			}
+			.course_nav a{
+				font-size: 14px;
+				color:#616161;
+				margin-right: 30px;
+				padding: 15px;
+				border-radius: 5px;
+			}
+			.course_nav a:hover{
+				background-color: #ece8e8;
+				cursor: pointer;
+			}
+			.selected{
+				background-color: #43bc60;
+				color:white !important;	
+						
+			}
+			.course_container{
+				width: 1170px;
+				margin:0 auto;
+				min-height: 30px;
+			}
+			.course{
+				float:left;
+				width: 248px;
+				padding: 0px 10px;
+				margin: 0px 10px;
+				border: 1px solid #e4ecf3;
+				height: 230px;
+				border-radius: 5px;
+				background-color: #ffffff;
+				margin-bottom: 30px;
+			}
+			.course img{
+				width:248px;
+				height: 138px;
+				margin-top: 10px;
+			}
+			.course .person{
+				width: 20px;
+				height: 15px;
+				margin-top: 10px;
+			}
+			.course .number{
+				font-size: 14px;
+				color:#c1c1c1;
+				position:relative;
+				bottom: 3px;
+			}
+			.course_title{
+				display: block;
+				font-size: 14px;
+				color:#616161;
+				margin-top: 20px;
+			}
+			.class_list{
+				min-height: 500px;
+			}
+			.introduction{
+				height: 422px;
+				background-color: #43bc60;
+			}
+			.footer_link{
+				height: 254px;
+				background-color: #2e2e2e;
+			}
+			.copyright{
+				height: 105px;
+				background-color:#212121 ;
+			}
+			.clear{
+				clear:both;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bar_menu">
+			<a>学<br/>习<br/>中<br/>心</a>
+		</div>
+		<div class="nav">
+			<div class="nav_left">
+				<img src="img/logo.png"/>
+				<ul>
+					<li>首页</li>
+					<li>全部课程</li>
+					<li>Unity</li>
+					<li>虚幻</li>
+					<li>关于我们</li>
+				</ul>
+			</div>
+			<div class="nav_right">
+				
+			</div>
+		</div>
+		<div class="slider">
+			<img src="img/a.jpg"/>
+		</div>
+		<div class="course_list">
+			<h2>网校课程</h2>
+			<h4>精选网校课程，满足你的学习兴趣。</h4>
+			<div class="course_nav">
+				<a class="selected">全部课程</a>
+				<a>Unity</a>
+				<a>Unreal</a>
+				<a>JavaEE</a>
+			</div>
+			<div class="course_container">
+				<div class="course">
+					<img src="img/course.png"/>
+					<span class="course_title">Web前端第一季（HTML）</span>
+					<img class="person" src="img/person.png"/>
+					<span class="number">1507</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png"/>
+					<span class="course_title">Web前端第一季（HTML）</span>
+					<img class="person" src="img/person.png"/>
+					<span class="number">1507</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png"/>
+					<span class="course_title">Web前端第一季（HTML）</span>
+					<img class="person" src="img/person.png"/>
+					<span class="number">1507</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png"/>
+					<span class="course_title">Web前端第一季（HTML）</span>
+					<img class="person" src="img/person.png"/>
+					<span class="number">1507</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png"/>
+					<span class="course_title">Web前端第一季（HTML）</span>
+					<img class="person" src="img/person.png"/>
+					<span class="number">1507</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png"/>
+					<span class="course_title">Web前端第一季（HTML）</span>
+					<img class="person" src="img/person.png"/>
+					<span class="number">1507</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png"/>
+					<span class="course_title">Web前端第一季（HTML）</span>
+					<img class="person" src="img/person.png"/>
+					<span class="number">1507</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png"/>
+					<span class="course_title">Web前端第一季（HTML）</span>
+					<img class="person" src="img/person.png"/>
+					<span class="number">1507</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png"/>
+					<span class="course_title">Web前端第一季（HTML）</span>
+					<img class="person" src="img/person.png"/>
+					<span class="number">1507</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png"/>
+					<span class="course_title">Web前端第一季（HTML）</span>
+					<img class="person" src="img/person.png"/>
+					<span class="number">1507</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png"/>
+					<span class="course_title">Web前端第一季（HTML）</span>
+					<img class="person" src="img/person.png"/>
+					<span class="number">1507</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png"/>
+					<span class="course_title">Web前端第一季（HTML）</span>
+					<img class="person" src="img/person.png"/>
+					<span class="number">1507</span>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="class_list"></div>
+		<div class="introduction"></div>
+		<div class="footer_link"></div>
+		<div class="copyright"></div>
+	</body>
+</html>

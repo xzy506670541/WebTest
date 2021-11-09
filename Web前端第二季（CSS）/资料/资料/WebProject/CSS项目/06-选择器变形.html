@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div p{ /*后代选择器*/
+				font-size: 20px;
+			}
+			div p span{
+				color: #0000FF;
+			}
+			div.one{
+				color:red;
+			}
+			.two{
+				font-size: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div><div>我是第1个div标签里面的内容<p>我是<span>p标签</span>里面的内容</p></div></div>
+		<div class="one two">我是第2个div标签里面的内容 </div>
+		<div class="one">我是第3个div标签里面的内容 </div>
+		<p class="one">我是p标签里面的内容</p>
+	</body>
+</html>
