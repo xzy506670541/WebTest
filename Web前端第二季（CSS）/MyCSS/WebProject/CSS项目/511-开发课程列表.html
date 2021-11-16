@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<style type="text/css">
+			body {
+				margin: 0px;
+				padding: 0px;
+			}
+
+			.bar_menu {
+				width: 35px;
+				background-color: #FFFFFF;
+				position: fixed;
+				top: 0px;
+				bottom: 0px;
+				right: 0px;
+				border-left: 1px solid aliceblue;
+			}
+
+			.bar_menu a {
+				display: block;
+				margin-top: 100px;
+				width: 35px;
+				text-align: center;
+				color: #616161;
+				font-size: 14px;
+				padding: 20px 0px;
+			}
+
+			/* 伪类 */
+			.bar_menu a:hover {
+				/* 移动上面鼠标图标变换 */
+				cursor: :pointer;
+				background-color: #43bc60;
+				/* 字体白色 */
+				color: white;
+			}
+
+			.nav {
+				height: 56px;
+				padding: 0px 10px;
+				background-color: #212121;
+			}
+
+			.nav_left {
+				height: 56px;
+				float: left;
+			}
+
+			.nav_left img {
+				height: 50px;
+				margin-top: 3px;
+				margin-left: 5px;
+				display: block;
+				float: left;
+			}
+
+			.nav_left ul {
+				/* 有序列表不显示圆点 */
+				list-style-type: none;
+				float: left;
+				/* 上下居中 */
+				margin: 0px;
+				padding: 0px 0px 0px 40px;
+			}
+
+			/* 有序列表样式改变 */
+			.nav_left ul li {
+				float: left;
+				font-size: 14px;
+				color: #fff;
+				line-height: 56px;
+				/* 上下居中 */
+				margin: 0px 40px 0px 0px;
+				padding: 0px;
+			}
+
+			/* 右边导向栏 */
+			.nav_right {
+				width: 56px;
+				float: right;
+			}
+
+			/* 滚动图片 */
+			.slider {
+				height: 451px;
+				background-color: #16232b;
+			}
+
+			.slider img {
+				height: 451px;
+				display: block;
+				margin: 0 auto;
+			}
+
+			/* 课程列表 */
+			.course_list {
+				min-height: 500px;
+			}
+
+			/* 课程列表：h2文字样式 */
+			.course_list h2 {
+				font-size: 32px;
+				color: #313131;
+				font-weight: 500px;
+				text-align: center;
+				margin-top: 50px;
+				margin-bottom: 10px;
+			}
+
+			/* 课程列表：h4文字样式 */
+			.course_list h4 {
+				font-size: 16px;
+				color: #919191;
+				font-weight: 400;
+				text-align: center;
+				margin-top: 0px;
+			}
+
+			/* 课程导向 */
+			.course_nav {
+				width: 1170px;
+				height: 80px;
+				margin: 40px auto 0;
+			}
+
+			/* 课程导向：网页链接样式*/
+			.course_nav a {
+				font-size: 14px;
+				color: #616161;
+				margin-right: 30px;
+				padding: 15px;
+				border-radius: 3px;
+			}
+
+			/* 伪类：课程导向：网页链接样式：鼠标移动上面有变化 */
+			.course_nav a:hover {
+				background-color: #F0F3EF;
+				cursor: pointer;
+			}
+
+			/* 课程导向：被选择的独有的样式 */
+			.selected {
+				background-color: #43BC60;
+				color: white !important;
+			}
+
+			/* 课程：容器 */
+			.course_container {
+				width: 1170px;
+				margin: 0 auto;
+				min-height: 30px;
+			}
+
+			/* 课程容器中课程 */
+			.course {
+				width: 248px;
+				padding: 0px 10px;
+				margin: 0px 10px;
+				border: 1px solid rgb(228 236 243);
+				height: 230px;
+				border-radius: 5px;
+				background-color: #FFFFFF;
+				/* 一行4个课程图片向左浮动 */
+				float: left;
+				/* 一行4个课程与下面课程需要有间隔 */
+				margin-bottom: 30px;
+			}
+
+			/* 课程容器中课程：图片样式 */
+			.course img {
+				width: 248px;
+				height: 138px;
+				margin-top: 10px;
+			}
+
+			.course .person {
+				width: 20px;
+				height: 15px;
+				margin-top: 10px;
+			}
+
+			.course .number {
+				color: #c1c1c1;
+				line-height: 22px;
+				font-size: 14px;
+				position: relative;
+				bottom: 3px;
+			}
+
+			/* 课程容器中课程：标题文字样式 */
+			.course_title {
+				/* 现在是行元素，变为块元素 */
+				display: block;
+				font-size: 14px;
+				color: #616161;
+				margin-top: 20px;
+			}
+			
+			.clear{
+				clear: both;
+			}
+
+			/* 班级列表 */
+			.class_list {
+				min-height: 500px;
+			}
+
+			/* 介绍 */
+			.introduction {
+				margin-top: 10px;
+				height: 422px;
+				background-color: #43bc60;
+			}
+
+			/* 页脚链接 */
+			.footer_link {
+				height: 254px;
+				background-color: #2e2e2e;
+			}
+
+			/* 网页权利链接 */
+			.copyright {
+				height: 105px;
+				background-color: #212121;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="bar_menu">
+			<a>学<br />习<br />中<br />心<br /></a>
+		</div>
+
+		<div class="nav">
+			<div class="nav_left">
+				<img src="img/logo.png">
+				<ul>
+					<li>首页</li>
+					<li>全部课程</li>
+					<li>Unity</li>
+					<li>虚幻</li>
+					<li>关于我们</li>
+				</ul>
+			</div>
+
+			<div class="nav_right">
+			</div>
+		</div>
+
+		<div class="slider">
+			<img src="img/a.jpg">
+		</div>
+
+		<div class="course_list">
+			<h2>网校课程</h2>
+			<h4>精选网校课程，满足你的学习兴趣。</h4>
+			<div class="course_nav">
+				<a class="selected">全部课程</a>
+				<a>Unity</a>
+				<a>Unreal</a>
+				<a>JavaEE</a>
+			</div>
+
+			<div class="course_container">
+				<!-- 第一行4个 -->
+				<div class="course">
+					<img src="img/course.png">
+					<span class="course_title">Web前端第一季</span>
+					<img class="person" src="img/person.png">
+					<span class="number">1570</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png">
+					<span class="course_title">Web前端第一季</span>
+					<img class="person" src="img/person.png">
+					<span class="number">1570</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png">
+					<span class="course_title">Web前端第一季</span>
+					<img class="person" src="img/person.png">
+					<span class="number">1570</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png">
+					<span class="course_title">Web前端第一季</span>
+					<img class="person" src="img/person.png">
+					<span class="number">1570</span>
+				</div>
+
+				<!-- 第二行 -->
+				<div class="course">
+					<img src="img/course.png">
+					<span class="course_title">Web前端第一季</span>
+					<img class="person" src="img/person.png">
+					<span class="number">1570</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png">
+					<span class="course_title">Web前端第一季</span>
+					<img class="person" src="img/person.png">
+					<span class="number">1570</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png">
+					<span class="course_title">Web前端第一季</span>
+					<img class="person" src="img/person.png">
+					<span class="number">1570</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png">
+					<span class="course_title">Web前端第一季</span>
+					<img class="person" src="img/person.png">
+					<span class="number">1570</span>
+				</div>
+
+				<!-- 第三行 -->
+				<div class="course">
+					<img src="img/course.png">
+					<span class="course_title">Web前端第一季</span>
+					<img class="person" src="img/person.png">
+					<span class="number">1570</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png">
+					<span class="course_title">Web前端第一季</span>
+					<img class="person" src="img/person.png">
+					<span class="number">1570</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png">
+					<span class="course_title">Web前端第一季</span>
+					<img class="person" src="img/person.png">
+					<span class="number">1570</span>
+				</div>
+				<div class="course">
+					<img src="img/course.png">
+					<span class="course_title">Web前端第一季</span>
+					<img class="person" src="img/person.png">
+					<span class="number">1570</span>
+				</div>
+				
+				<!-- 清除浮动 -->
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		<div class="class_list"></div>
+		<div class="introduction"></div>
+		<div class="footer_link"></div>
+		<div class="copyright"></div>
+	</body>
+</html>

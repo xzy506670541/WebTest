@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 300px;
+				height: 300px;
+			}
+
+			.one {
+				/* 静态定位：普通文档流的形式 */
+				position: static;
+				background-color: red;
+			}
+
+			.two {
+				background-color: green;
+				/* 相对位置：相对于自身原来的位置(不加定位时候的位置)。原来的框还在文档流里面占有位置。 */
+				/*position: relative;
+			top: 20px;
+			left: 30px; */
+
+				width: 100px;
+				height: 100px;
+
+				/* 绝对定位的元素的位置相对于最近的已定位祖先元素 */
+				/* position: absolute; */
+
+				/* 			top: 0px;
+				left: 0px; */
+
+				/* 		top: 20px;
+				left: 50px; */
+
+				/* 		bottom: 10px;
+				right: 10px; */
+
+				/* 绝对位置，不会随着浏览器滚动而滚动  */
+				/* position: fixed; */
+				
+				/* 绝对定位的元素的位置相对于最近的已定位祖先元素，会随着浏览器滚动而滚动 */
+				position: absolute;
+				
+				/* 右下角，类似弹窗广告，不会随着浏览器滚动而滚动 */
+				right: 0px;
+				bottom: 0px;
+			}
+
+			.three {
+				background-color: blue;
+
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="one"></div>
+		<div class="two"></div>
+		<div class="three"></div>
+
+		<!-- 	<div class="three">
+			<div class="two"></div>
+		</div> -->
+
+	</body>
+</html>

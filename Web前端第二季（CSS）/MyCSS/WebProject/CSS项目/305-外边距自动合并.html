@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<style type="text/css">
+			/* 1.类标签的边距自动使用最大的数值 */
+			/* 			.one,.two{
+				width: 300px;
+				height: 300px;
+			}
+			.one{
+				background-color: red;
+				margin-bottom: 30px;
+			}
+			.two{
+				background-color: green;
+				margin-top: 50px;
+			} */
+
+			/* 2.父子盒子也是自动使用最大的数值 */
+			.one{
+				width: 300px;
+				height: 300px;
+			}
+			.two {
+				width: 100px;
+				height: 100px;
+			}
+			.one {
+				background-color: red;
+				margin-top: 30px;
+			}
+			.two {
+				background-color: green;
+				margin-top: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="one">			
+			<div class="two"></div>			
+		</div>
+	</body>
+</html>

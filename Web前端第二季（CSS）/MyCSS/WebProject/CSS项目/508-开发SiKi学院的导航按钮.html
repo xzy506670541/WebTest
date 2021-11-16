@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<style type="text/css">
+			body {
+				margin: 0px;
+				padding: 0px;
+			}
+
+			.bar_menu {
+				width: 35px;
+				background-color: #FFFFFF;
+				position: fixed;
+				top: 0px;
+				bottom: 0px;
+				right: 0px;
+				border-left: 1px solid aliceblue;
+			}
+
+			.bar_menu a {
+				display: block;
+				margin-top: 100px;
+				width: 35px;
+				text-align: center;
+				color: #616161;
+				font-size: 14px;
+				padding: 20px 0px;
+			}
+
+			/* 伪类 */
+			.bar_menu a:hover {
+				cursor: :pointer;
+				/* 移动上面鼠标图标变换 */
+				background-color: #43bc60;
+				color: white;
+				/* 字体白色 */
+			}
+
+			.nav {
+				height: 56px;
+				padding: 0px 10px;
+				background-color: #212121;
+			}
+
+			.nav_left {
+				height: 56px;
+				float: left;
+			}
+
+			.nav_left img {
+				height: 50px;
+				margin-top: 3px;
+				margin-left: 5px;
+				display: block;
+				float: left;
+			}
+
+			.nav_left ul {
+				/* 有序列表不显示圆点 */
+				list-style-type: none;
+				float: left;
+				/* 上下居中 */
+				margin: 0px;
+				padding: 0px 0px 0px 40px;
+			}
+
+			.nav_left ul li {				
+				float: left;
+				font-size: 14px;
+				color: #fff;
+				line-height: 56px;
+				/* 上下居中 */
+				margin: 0px 40px 0px 0px;
+				padding: 0px;
+			}
+
+			.nav_right {
+				width: 56px;
+				float: right;
+			}
+
+			.slider {
+				height: 451px;
+			}
+
+			.course_list {
+				min-height: 500px;
+			}
+
+			.class_list {
+				min-height: 500px;
+			}
+
+			.introduction {
+				height: 422px;
+				background-color: #43bc60;
+			}
+
+			.footer_link {
+				height: 254px;
+				background-color: #2e2e2e;
+			}
+
+			.copyright {
+				height: 105px;
+				background-color: #212121;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="bar_menu">
+			<a>学<br />习<br />中<br />心<br /></a>
+		</div>
+
+		<div class="nav">
+			<div class="nav_left">
+				<img src="img/logo.png">
+				<ul>
+					<li>首页</li>
+					<li>全部课程</li>
+					<li>Unity</li>
+					<li>虚幻</li>
+					<li>关于我们</li>
+				</ul>
+			</div>
+			<div class="nav_right">
+
+			</div>
+		</div>
+
+		<div class="slider"></div>
+		<div class="course_list"></div>
+		<div class="introduction"></div>
+		<div class="footer_link"></div>
+		<div class="copyright"></div>
+	</body>
+</html>
