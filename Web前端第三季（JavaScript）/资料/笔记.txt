@@ -1,0 +1,497 @@
+-----------------------------------------------------------------JavaScript基础语法
+HTML CSS JavaScript
+本课程是Web前端三部曲的JavaScript
+为后续Java Web部分的学习打下坚实的基础，也为想要深入学习Web前端的童鞋打下坚实的基础。
+
+JavaScript是干什么的？
+HTML是基本的网页（文字 图片 视频）
+CSS通过控制布局和样式让网页更加美观
+JavaScript是给网页添加动画和一些其他的交互事件，让网页变得更加活泼。
+JavaScript跟编程语言差不多，不过它不是编程语言，它是脚本语言，它的运行不需要编译，直接由解释器解释执行。它也有变量、函数。
+
+JavaScript可以完成的效果
+数据校验（输入的密码，年龄，用户名是否符合要求）
+图片轮播
+广告弹框
+
+
+JavaScript的特点：
+1，语法相对来说比较简单（弱类型的变量类型）
+2，跨平台（JavaScript脚本语言不依赖于操作系统,仅需要浏览器的支持）
+
+JavaScript代码在哪里书写
+第一种方式：网页内(可以放在网页的任意位置)
+<script type="text/javascript">
+</script>
+第二种方式：行内
+第三种方式：外部引入的方式
+<script type="text/javascript" src="test.js" ></script>
+
+警告框
+window.alert('Hello World!'); // alert('Hello World');
+
+什么是函数？
+一个函数有自己一个固定的功能，调用函数相当于调用这个功能。
+函数有系统内置的函数，我们也可以定义自己的函数，使用这个函数实现我们想要的功能。
+在定义函数的时候，我们需要写很多行代码来实现我们想要的功能。
+函数可以被多次调用，我们只需要通过函数名调用即可调用响应的功能，这样就避免了每次想要调用某个功能的时候，就去书写重复的代码。
+
+函数的作用：
+1，一个函数实现一个固定的功能
+2，避免重复写代码
+
+函数怎么调用？
+xxx1(arg1,arg2,arg3);
+函数名是定义的时候决定的，参数也是定义的时候决定的。我们想要什么功能就必须调用对应名字的函数，并且提供对应的参数。（调用别人的函数的时候，不能自己随便写函数名和参数）
+
+什么是字符串？
+几个字符（中文字符或者英文字符或者某个特殊符号比如逗号）组合在一起，组成一个串，就是字符串。
+字符串是JavaScript中的一种数据类型。
+JavaScript中的数据是指什么呢？（字符串，数字，图片，某个运算结果等 这些都是数据）
+每个数据都有自己的数据类型，不同的数据类型在内存中有不同的存储方式。我们只需要告诉解释器某个数据的数据类型是什么，不用管它怎么在内存中存储的。解释器（浏览器）会自动的根据这个数据的类型，把它按照响应的方式存储到内存中。
+
+JavaScript中的字符串的规范
+字符串必须使用单引号或者双引号括起来。
+
+什么时候使用单引号，什么时候双引号呢？
+（1）只使用字符的字符串（字符串不包括单引号或者双引号），单引号和双引号没有区别
+（2）在包括单引号的字符串中可以直接用双引号，在包括双引号的字符串中可以直接用单引号
+（3）如果在双引号包括的字符串中用双引号，需要用反斜杠转义，注意是"\"   ;同样在单引号包括的字符串中用单引号，也需要转义
+（4）如果要用反斜杠，则输入‘\\’
+
+JavaScript中的数字类型
+数字类型就是可以直接做数学运算（加减乘除）的数据类型。
+直接书写就可以了
+100 -100
+100.00 100.3   -90.4
+123e5（12300000）  123e-5（0.00123） //科学计数法
+
+JavaScript中的所有数据类型
+字符串(string)
+数字(number)
+布尔(boolean)
+数组(array)
+对象(object)
+空(null)
+未定义(undefined)
+
+JavaScript的语句
+一个语句以；分号结尾
+
+注释：
+单行注释  //
+多行注释  /* */
+快捷键
+
+JavaScript中的变量
+var x = 2; //变量声明语句，赋值语句
+x = 3;
+变量里面存储的是一个数据，使用变量，相当于使用这个变量里面的数据！
+为什么不直接使用数据，而通过变量来使用呢？
+var str = "Hello World!"; alert(str);
+在某些情况下，我们需要存储的数据是变化的，比如玩游戏的时候的分数。
+
+注意事项：(JavaScript是弱类型的语言)
+变量声明的时候不需要指定类型
+变量的类型是由这个变量里面的值决定的
+变量可以存储不同类型的数据
+变量的声明不是必须的
+var a = 1;
+b = a+100;
+
+多个变量声明
+var name1 = v1, name2 = v2, name3 = v3;
+
+JavaScript变量命名规则
+1，变量必须以字母开头
+2，变量也能以 $ 和 _ 符号开头（不推荐）
+3，变量名称对大小写敏感（y 和 Y 是不同的变量）
+4，不能使用关键字
+
+JavaScript中的关键字
+var break continue function	...
+
+取得变量的类型
+typeof(v)
+
+运算符
+赋值运算符	=
+算术运算符	+	-	*	/	%	++	--
+赋值运算符	+=	-=	*=	/=	%=
+字符串相加
+字符串和其他类型数据相加
+
+------------------------------------------------------------------------流程控制
+流程控制
+控制程序执行的流程，没有流程控制的话，程序默认从上到下执行！
+有了流程控制，可以让程序执行某些满足条件的语句，或者重复执行某些语句！
+
+if语句，布尔类型和比较运算符
+if(hp<=0){
+//Game Over
+}
+
+布尔类型(Boolean)
+true	代表：	对 是 有 1
+false	代表：	错 不是 没有 0
+
+比较运算符	
+==	===		!=	>	<	>=	<=
+
+条件判断语句
+第一种方式
+if(){
+}
+第二种方式
+if(){
+}else{
+}
+第三种方式
+if(){
+}else if(){
+}else{
+}
+
+逻辑运算符
+&&   和（and）	表示同时满足两个条件
+||	或者（or）	表示满足其中一个条件
+
+switch语句
+switch(a){
+case 1:
+break;
+...可以有多个case
+default:
+//当前面的case都不满足的时候才会执行，default语句
+}
+
+循环结构
+for循环
+第一种方式循环10次
+for(var i =0;i<10;i++){
+}
+第二种方式循环10次
+for(var i =1;i<=10;i++){
+}
+
+while循环
+while(条件){
+循环体
+}
+
+var i=0;
+while(i<10){
+//循环体
+i++;
+}
+
+break语句和continue语句
+目标都是距离最近的循环
+break	跳出循环
+continue	中断本次循环，继续执行下次循环
+
+循环嵌套
+
+JavaScript函数(function)
+怎么定义自己的函数？
+function name(arg1,arg2){
+}
+name：名字 arg1...参数 {}函数体，也叫做语句块
+函数的声明会被前置
+
+用函数解决问题
+1，创建一个函数，可以打印箭头的符号到控制台
+2，做一个简化版的日志输出函数
+3，实现加法（return 语句的作用）
+一个函数相当于一个机器，比如抓娃娃，你投进去的是币（参数），有可能不出来任何东西，有可能出来东西。
+
+匿名函数
+function (){} 
+因为它没有名字，所以不能调用。
+匿名函数怎么使用呢？
+第一种方式：使用一个变量接收（可以认为这个变量是一个函数类型，用来指向引用一个函数）
+第二种方式：作为一个参数传递过去（回调函数）
+
+网页写入
+document.write('Hello World!');
+
+日志打印
+console.log("xxx");输出到控制台，日志打印，用于错误调试
+
+----------------------------------------------------------------
+字符串string
+常用方法
+正则表达式
+	正则表达式描述了一个字符串的书写规则
+		正则表达式是一个字符串，这个字符串按照正则表达式的语法来进行书写
+		全部是字母的字符串
+		全部是数字的字符串
+		以数字开头，长度为4的字符串
+		第一字母是a第二个字母是b，没有其他字符的字符串
+	
+	正则表达式可以用来做
+		搜索
+		替换
+		判断
+	
+	语法手册：http://www.runoob.com/jsref/jsref-obj-regexp.html
+	小案例：http://www.runoob.com/js/js-regexp.html
+	在线正则表达式测试：
+		https://www.jb51.net/tools/zhengze.htm	
+		http://tool.oschina.net/regex/
+
+JavaScript对象
+1、什么是JavaScript对象
+什么是键值对？key value一对、
+2、创建JavaScript对象
+person=new Object();
+person.firstname="Bill";
+person.lastname="Gates";
+person.age=56;
+person.eyecolor="blue";
+3、创建构造方法
+function person(firstname,lastname,age,eyecolor)
+{
+this.firstname=firstname;
+this.lastname=lastname;
+this.age=age;
+this.eyecolor=eyecolor;
+}
+4、添加普通方法（方法一）
+person.changeLastname=function (name){
+this.lastname=name;
+}
+5、添加普通方法（方法二）
+function person(firstname,lastname,age,eyecolor)
+{
+this.firstname=firstname;
+this.lastname=lastname;
+this.age=age;
+this.eyecolor=eyecolor;
+
+this.changeName=changeName;
+function changeName(name)
+{
+this.lastname=name;
+}
+}
+6、访问对象的属性
+objectName.propertyName
+7、访问对象的方法
+objectName.methodName()
+
+for in循环遍历对象
+var student={
+name:"siki",
+age:12,
+sex:"男"
+}
+for(key in student){
+	console.log(student[key]);
+}
+-------------------------------------------------------案例数据校验
+1，怎么通过id获得某个元素
+document.getElementById("idname")
+2，怎么获得输入框输入的内容
+ele.value
+3，怎么修改元素的内容
+ele.innerHTML
+4，两种给出用户提示的方式
+alert方式
+网页上显示
+5，校验的时机
+onsubmit
+onchange
+onfocus onblur
+
+校验要求
+用户名长度必须位于3到6位之间
+密码必须是6到10为之间
+密码和重复密码必须一样
+邮箱格式 xxx@xxx	第二部分是域名结尾.com .org .cn .net等
+
+--------------------------------------------------------JavaScript DOM
+DOM树（图片）：http://www.w3school.com.cn/js/js_htmldom.asp
+简述：网页就是有标签组成的，标签是层层包裹的（父标签和子标签），最内存的标签包裹着内容。（文本或者图片）
+
+DOM：文档对象模型（Document Object Model）
+简述：网页被加载的时候，浏览器会给网页上的每个标签创建这个标签对应的对象。我们可以获取这个对象，来操作对应的标签的一些属性。
+总结：获取要操作的标签元素对应的对象，通过这个对象来操作这个元素。
+
+第一步：获取要操作的标签元素对应的对象（怎么获取）
+第二部：通过这个对象来操作这个元素（怎么操作）
+设置内容，设置属性，设置CSS样式
+
+查找 HTML 元素
+1、通过 id 找到 HTML 元素
+document.getElementById("idname")
+2、通过标签名找到 HTML 元素
+document.getElementsByTagName("tagName")（全局搜索，整个网页文档）
+tagObj.getElementsByTagName("tagName") 搜索tagObj的子元素（b不包括自身）
+3、通过类名找到 HTML 元素
+document.getElementsByClassName("className")
+ele.getElementsByClassName("className")
+4、通过名字查找HTML元素
+document.getElementsByName("name")
+这里的名字不是指标签的名字，是指的name属性的名字。
+
+获取内容
+ele.innerHTML
+ele.innerText
+设置内容
+ele.innerHTML = "xxx";
+ele.innerText = "xxx";
+
+获取属性的值
+ele.getAttribute("name")  得到这个属性对应的值
+设置属性的值
+ele.setAttribute("name","value")
+这里可以设置标签没有的属性，只是这个属性没有特定的作用而已。
+
+图片修改
+ele.setAttribute("src","path")
+ele.src="path";
+
+超链接修改
+ele.setAttribute("href","path")
+ele.href="path"
+
+复选框修改
+ele.setAttribute("checked","true/false")
+ele.checked=true/false
+
+CSS样式修改
+ele.style.color="red";
+ele.style.fontSize="20px";
+
+DOM事件--------
+
+给元素添加点击事件
+1，通过onclick属性
+onclick="this.innerHTML='谢谢!'"
+onclick="function(arg1,arg2)"
+2，通过JavaScript代码添加点击事件（第一种方式）
+ele.onclick=function(){};
+3，通过JavaScript代码添加点击事件（第二种方式）
+ele.addEventListener("click",function(){});
+
+其他事件（每个事件对应的事件名，就是把on去掉）
+onclick
+onload
+onunload
+onchange	(文本输入控件)
+onmouseover	onmouseout
+onmousedown onmouseup
+
+DOM节点----------
+
+创建新元素（DOM树中的新节点）
+var p = document.createElement("p");
+p.innerHTML="xxx";
+ele.appendChild(p);//把新创建的节点添加到DOM树中
+
+创建文本节点
+var node=document.createTextNode("xxxxx");
+ele.appendChild(node);
+
+删除元素（删除节点）
+ele.removeChild(node);
+
+---------------------------------------------------图片轮播
+1，怎么自动调用某个函数（自动轮播）
+setInterval(functionName,millisec);
+2，当网页加载完成的时候，设置计时调用
+onload
+为什么要等网页加载完成？
+只有网页加载完成了，才可以访问网页上的任何元素！
+3，两种控制图片路径的方式
+数组
+设置固定规范的图片名称
+
+数组
+1、创建数组
+var myArray=new Array()
+var mycars=new Array(3)	数组的长度是不固定的
+var mycars=new Array("Saab","Volvo","BMW")
+2、访问数组元素和设置数组元素
+mycars[0]
+mycars[0]="Opel"
+3、取得数组长度
+arr.length
+
+----------广告弹框
+1，广告的位置
+网页的正上方
+网页正中间
+网页右下角
+2，弹出的时间
+网页加载的时候	onload
+定时弹出
+只显示一次（定时隐藏）
+每隔一段时间弹出
+
+------------------------------------------------JavaScript Window
+
+window对象
+window对象是一个浏览器对象，代表浏览器窗口。
+我们定义的变量、函数会自动放在window对象里面。
+document也是window里面的。window.document
+window中的变量或者对象一般可以直接写，不加 window.前缀
+
+为什么要把document放在window里面
+window代表整个浏览器窗口，网页是位于浏览器窗口里面的，document主要是跟网页有关，跟元素相关的操作都是通过document完成的，所以可以认为document是整个网页，网页位于窗口里面。
+所以document也就放在了window里面
+
+window对象的函数（弹出框）
+alert
+confirm 确认框
+prompt	输入框
+setInterval	clearInterval
+setTimeout	clearTimeout
+
+
+window对象的函数（跟窗口有关系）
+var w = window.open("http://www.sikiedu.com","name","width=500,height=500");
+w.resizeTo(300,300);
+w.moveTo(100,100);
+w.close();
+w.focus()获取焦点
+
+screen( window.screen ) 获取屏幕分辨率
+screen.availWidth - 可用的屏幕宽度
+screen.availHeight - 可用的屏幕高度
+
+location( window.location )
+window.location 对象用于获得当前页面的地址 (URL)，并把浏览器重定向到新的页面。
+
+location.hostname 返回 web 主机的域名
+location.pathname 返回当前页面的路径和文件名
+location.port 返回 web 主机的端口 （80 或 443）
+location.protocol 返回所使用的 web 协议（http:// 或 https://）
+
+window.location.assign("http://www.sikiedu.com")  相当于一个超链接的功能
+
+history( window.history )
+window.history 对象包含浏览器的历史。
+history.back() - 与在浏览器点击后退按钮相同
+history.forward() - 与在浏览器中点击按钮向前相同
+
+history.go(-2)	后退两步
+
+--------------------------------------------------------------------------------案例
+--------------------全选和全不选操作
+1，如果获得所有的复选框
+document.getElementsByName("name")
+2，获得设置复选框的状态
+ele.checked
+ele.checked=true/false;
+
+-----------省市二级联动下拉列表效果
+1，创建二维数组
+var arr = new Array(n); 省份的个数
+arr[0]=new Array(m)  省份下城市的个数
+2，清空下拉列表
+ele.options.length = 0;
+
+其他常用对象和常用方法
+http://www.w3school.com.cn/jsref/index.asp

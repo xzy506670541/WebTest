@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// 1.构造函数
+			function user(_name, _age, _sex) {
+				this.name = _name;
+				this.age = _age;
+				this.sex = _sex;
+				
+				//函数使用匿名函数
+				this.show = function() {
+					console.log(this.name + ";" + this.age + ";" + this.sex);
+					console.log("");
+				}
+				this.setAge = function(_age) {
+					this.age = _age;
+				}
+			}
+			var user1 = new user("xzy", 18, "男");
+			var user2 = new user("刘亦菲", 20, "女");
+			var user3 = new user("杨幂", 21, "女");
+			console.log("测试1：" + user1.name);
+			console.log("测试1：" + user2.name);
+			console.log("测试1：" + user3.name);
+
+			user1.show()
+			user1.setAge(20);
+			user1.show()
+			
+			// 2.动态给对象添加独有的函数
+			console.log("测试2");
+			user3.setName=function (name)
+			{
+				this.name=name;
+			}
+			user3.setName("李白");
+			user3.show();
+			
+			// 3.遍历找到对象里面的值,通过键找到值
+			console.log("测试3："+user3.name);
+			console.log("测试3："+user3["name"]);
+			console.log("");
+			
+			// 4.遍历对象所有键值对			
+			console.log("测试4");
+			for(key in user3){
+				console.log(key+":"+user3[key]);
+			}			
+			console.log("");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			console.log("数据校验第一步");
+//			console.log("数据校验第二步");
+//			console.log("数据校验第三步改变");
+//			console.log("数据校验第四步");
+			
+			
+//			function myname(){
+//				console.log("我是函数体");
+//			}
+//			myname();
+
+//			datacheck();
+//			datacheck();
+//			datacheck();
+			
+			//创建一个新的函数（声明函数 或者 定义函数）
+//			function datacheck(){
+//				console.log("数据校验第一步");
+//				console.log("数据校验第二步改变");
+//				console.log("数据校验第三步改变");
+//				console.log("数据校验第四步");
+//			}
+			
+//			function add(){
+//				var a = 100;
+//				var b = 200;
+//				var res = a+b;
+//			}
+
+			//名字 参数 返回值
+//			function add(arg1,arg2){
+//				var res = arg1 + arg2;
+//				
+//				return res;
+//			}
+//			
+//			var res1 = add(100,200);
+//			var res2 = add(80,90);
+//			console.log(res1);
+//			console.log(res2);
+
+//			function (){
+//				console.log("我是匿名函数");
+//			}
+
+//			var a = function (){
+//				console.log("我是匿名函数");
+//			}
+//			a();
+
+			function attack(attackmode){
+				//console.log("我使用刀进行攻击");
+				attackmode();
+				console.log("掉血");
+			}
+			attack( function (){
+				console.log("我使用刀进行攻击");
+			} );
+			
+			attack(function(){console.log("我使用枪进行攻击");});
+			
+//			window.alert("你好");
+//			console.log();
+//			document.write("你好");
+			
+	</script>
+	</head>
+	<body>
+	</body>
+</html>

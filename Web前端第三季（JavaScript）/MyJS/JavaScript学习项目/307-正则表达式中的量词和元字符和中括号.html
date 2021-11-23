@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//1.方括号用于查找某个范围内的字符：/[1234]/:判断字符中是否有1或者2或者3或者4
+			var p1_1 = /[1234]/;
+			console.log("测试1：" + p1_1.test("1"));
+			console.log("测试1：" + p1_1.test("2"));
+			console.log("测试1：" + p1_1.test("3"));
+			console.log("测试1：" + p1_1.test("5"));
+			console.log("");
+
+			//2.方括号用于查找某个范围内的字符：/[abc]/:判断字符中是否有a或者b或者c
+			var p2_1 = /[abc]/;
+			console.log("测试2：" + p2_1.test("a"));
+			console.log("测试2：" + p2_1.test("b"));
+			console.log("测试2：" + p2_1.test("c"));
+			console.log("测试2：" + p2_1.test("d"));
+			console.log("");
+
+			// 3.元字符是拥有特殊含义的字符：
+			var p3_1 = /\d/; //\d=查找数字0-9
+			console.log("测试3：" + p3_1.test("1"));
+			console.log("测试3：" + p3_1.test("2"));
+			console.log("测试3：" + p3_1.test("c"));
+			console.log("测试3：" + p3_1.test("d"));
+			console.log("");
+
+			// 4.正整数
+			var p4_1 = /^[1-9]\d*$/ //开头是1到9+中间是0-9并且有多个+结尾以0-9结尾
+			console.log("测试4：" + p4_1.test("1123"));
+			console.log("测试4：" + p4_1.test("0"));
+			console.log("测试4：" + p4_1.test("-1"));
+			console.log("测试4：" + p4_1.test("-4591"));
+			console.log("");
+
+			// 5.量词:
+			// n+	匹配任何包含至少一个 n 的字符串。
+			// n*	匹配任何包含零个或多个 n 的字符串。
+			// n?	匹配任何包含零个或一个 n 的字符串。
+			var p5_1 = /^a+/;
+			console.log("测试5：" + p5_1.test("1123"));
+			console.log("测试5：" + p5_1.test("a"));
+			console.log("测试5：" + p5_1.test("aa"));
+			console.log("测试5：" + p5_1.test("abb"));
+			console.log("测试5：" + p5_1.test("baa"));
+			console.log("");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<script type="text/javascript">
+			// 1.匿名函数：避免将攻击方式写固定死，所以制作匿名函数attackMode，灵活使用
+			function attack(attackMode)
+			{
+				attackMode();
+				console.log("掉血！");
+			}			
+			
+			attack(function(){console.log("我使用剑攻击！");});
+			
+			attack(function()
+			{
+				console.log("我使用刀攻击！");
+			})
+			
+			// 2.alert前面是window对象，为了方便直接将其省略
+			window.alert("你好");
+			
+			//3.document.write将内容写在了body里面
+			document.write("你好，document.write将内容写在了body里面！");
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

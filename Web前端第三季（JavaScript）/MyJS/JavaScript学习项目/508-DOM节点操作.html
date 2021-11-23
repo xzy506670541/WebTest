@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="my_div">
+			<span>第一个span</span>
+			<span>第二个span</span>
+			<span>第三个span</span>
+			<span>第四个span</span>
+			<p id="my_p">我是p标签</p>
+			<span id="my_span">我是span标签，准备被移除</span>
+		</div>
+
+	</body>
+</html>
+
+<script type="text/javascript">
+	var my_p = document.getElementById("my_p");
+
+	//测试1：添加span标签
+	// my_p.innerHTML = "<span>我是第五个span;</span>";
+
+	// 测试2：给div添加节点，会将之前的内容全部覆盖了
+	// var my_div = document.getElementById("my_div");
+	// my_div.innerHTML="<span>我是第六个span;</span>";
+
+	// 3.测试3：避免测试2的问题，所以新建span节点
+	// var my_div = document.getElementById("my_div");
+	// var newSpan = document.createElement("span"); //创建<span></span>
+	// newSpan.innerText = "我是第七个span;"; //第一种添加文本的方式
+	// my_div.appendChild(newSpan);
+
+	// 4.第二种添加文本的方式
+	// var textNode = document.createTextNode("我是第八个span;");
+	// var newSpan = document.createElement("span"); //创建<span></span>
+	// newSpan.appendChild(textNode);
+	// my_div.appendChild(newSpan);
+
+	// 5.移除标签
+	var my_div = document.getElementById("my_div");
+	var my_span = document.getElementById("my_span");
+	my_div.removeChild(my_span);
+</script>

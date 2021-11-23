@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script type="text/javascript">
+			function check(){
+				var emailMsg = document.getElementById("emailMsg");
+				var passwordMsg = document.getElementById("passwordMsg");
+				
+				var username = document.getElementById("username");
+				var usernameMsg = document.getElementById("usernameMsg");
+				
+				var isPass = true;
+				
+				var length = username.value.length;
+				if(length<3 || length>6){
+//					alert("用户名长度必须是3-6位");
+					usernameMsg.innerText= "用户名长度必须是3-6位";
+					isPass = false;
+				}else{
+					usernameMsg.innerText= "";
+				}
+				
+				var email = document.getElementById("email").value;
+				var p = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+				if(p.test(email)==false){
+//					alert("邮箱格式不正确");
+					emailMsg.innerText="邮箱格式不正确";
+					isPass = false;
+				}else{
+					emailMsg.innerText="";
+				}
+				
+				var password = document.getElementById("password").value;
+				var rePassword = document.getElementById("rePassword").value;
+				if(password.length<6 || password.length>10){
+//					alert("密码必须在6-10位之间");
+					passwordMsg.innerText="密码必须在6-10位之间"
+					isPass=false;
+				}else{
+					passwordMsg.innerText=""
+					if(password!=rePassword){
+//						alert("两次输入密码不一致");
+						passwordMsg.innerText="两次输入密码不一致";
+						isPass=false;
+					}else{
+						passwordMsg.innerText="";
+					}
+				}
+				
+//				if(isPass==false){
+//					return false;
+//				}else{
+//					return true;	
+//				}
+				return isPass;
+			}
+			//onblur失去焦点的时候调用
+			function checkUsername(username){
+				var usernameMsg = document.getElementById("usernameMsg");
+				
+				var length = username.value.length;
+				if(length<3 || length>6){
+					usernameMsg.innerText= "用户名长度必须是3-6位";
+				}else{
+					usernameMsg.innerText= "";
+				}
+			}
+			function checkEmail(email){
+				var emailMsg = document.getElementById("emailMsg");
+				var p = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+				if(p.test(email.value)==false){
+					emailMsg.innerText="邮箱格式不正确";
+				}else{
+					emailMsg.innerText="";
+				}
+			}
+			function checkPassword(){
+				var passwordMsg = document.getElementById("passwordMsg");
+				var password = document.getElementById("password");
+				var rePassword = document.getElementById("rePassword").value;
+				if(password.value.length<6 || password.value.length>10){
+					passwordMsg.innerText="密码必须在6-10位之间"
+					isPass=false;
+				}else{
+					passwordMsg.innerText=""
+					if(password.value!=rePassword){
+						passwordMsg.innerText="两次输入密码不一致";
+						isPass=false;
+					}else{
+						passwordMsg.innerText="";
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		
+		<form action="register.jsp" onsubmit="return check()">
+			<table border="1" width="500px" height="500px">
+				<tr>
+					<td colspan="2" align="center">注册</td>
+				</tr>
+				<tr>
+					<td align="right">用户名:</td><td align="left"> <input type="text" id="username" onblur="checkUsername(this)" />
+					<font color="red" id="usernameMsg"></font>
+					</td>
+				</tr>
+				<tr>
+					<td align="right">邮箱：</td><td> <input type="text" id="email" onblur="checkEmail(this)" /><font color="red" id="emailMsg"></font> </td>
+				</tr>
+				<tr>
+					<td align="right">密码：</td><td> <input type="password" id="password" onblur="checkPassword()" /><font color="red" id="passwordMsg"></font> </td>
+				</tr>
+				<tr>
+					<td align="right">重复密码：</td><td> <input type="password" id="rePassword" onblur="checkPassword()"/>  </td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"> <input type="submit" value="注册" /> </td>
+				</tr>
+			</table>
+		</form>
+		<!--DOM Document Object Model-->
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 1.通过onclick属性添加事件 -->
+		<div id="" onclick="console.log('我被点击了！');">
+			DOM事件 div
+		</div>
+
+		<div onclick="divClick()">
+			DOM事件 div
+		</div>
+
+		<span id="my_span">
+			DOM事件 span
+		</span>
+
+		<p>
+			DOM事件 p
+		</p>
+
+		<a>
+			DOM事件 a
+		</a>
+	</body>
+</html>
+
+<script type="text/javascript">
+	function divClick() {
+		console.log("div被点击了！");
+	}
+
+	//2.通过js代码给元素添加事件
+	//①方法一：通过id查找元素，给其添加点击事件
+	// var my_span = document.getElementById("my_span");
+	// my_span.onclick = function() {
+	// 	console.log("通过id查找元素 span 被点击了！");
+	// }
+
+	// ②方法二：	
+	//函数名方式：通过addEventListener添加事件
+	// var my_span = document.getElementById("my_span");
+	// my_span.addEventListener("click",spanClick);
+	// function spanClick(){
+	// 	console.log("函数名方式 span被点击了")
+	// }
+
+	//匿名函数方式：
+	var my_span = document.getElementById("my_span");
+	my_span.addEventListener("click", function() {
+		console.log("匿名函数方式:span被点击了！");
+	})
+</script>

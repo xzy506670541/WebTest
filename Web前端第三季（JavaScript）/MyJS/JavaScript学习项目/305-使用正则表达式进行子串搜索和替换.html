@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script type="text/javascript">
+			//var p1 = /xxxx/;
+			//规则1 	全部是字母的字符串	abc	ab12 ab_ 123_ 43ew2 sdfer
+			//规则2	全部是数字的字符串	213 sdfkl 23434c adf_ 234
+			//规则3 	以数字开头，长度为4的字符串 
+			//规则4	第一字母是a第二个字母是b，没有其他字符的字符串	ab
+
+			//搜索 替换 判断
+			//形式： /正则表达式主体/修饰符
+			// i执行对大小写不敏感的匹配 
+			// g执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。 
+			// m执行多行匹配。
+			var str = "  123asd as hello,world,xzy,!   as";
+
+			//1.搜索			
+			var p1 = /as/i;//返回找到的第一个索引
+			var index = str.search(p1); 
+			console.log(index);
+
+			index = str.search("as"); //返回找到的第一个索引
+			console.log(index);
+
+			// 2.替换
+			var p2_1 = /as/i; //替换找到的第一个
+			var str2_1 = str.replace(p2_1, '----');
+			console.log(str2_1);
+
+			var p2_1 = /as/ig; //替换所有找到的
+			var str2_1 = str.replace(p2_1, '----');
+			console.log(str2_1);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="one">
+			DOM：文档对象模型（Document Object Model）
+			简述：网页被加载的时候，浏览器会给网页上的每个标签创建这个标签对应的对象。我们可以获取这个对象，来操作对应的标签的一些属性。
+			总结：获取要操作的标签元素对应的对象，通过这个对象来操作这个元素。
+			<span>
+				DOM：文档对象模型（Document Object Model）
+				简述：网页被加载的时候，浏览器会给网页上的每个标签创建这个标签对应的对象。我们可以获取这个对象，来操作对应的标签的一些属性。
+				总结：获取要操作的标签元素对应的对象，通过这个对象来操作这个元素。
+			</span>
+		</div>
+		<div class="two" name="xzy">
+			DOM：文档对象模型（Document Object Model）
+			简述：网页被加载的时候，浏览器会给网页上的每个标签创建这个标签对应的对象。我们可以获取这个对象，来操作对应的标签的一些属性。
+			总结：获取要操作的标签元素对应的对象，通过这个对象来操作这个元素。
+		</div>
+		<div class="two" name="xzy">
+			DOM：文档对象模型（Document Object Model）
+			简述：网页被加载的时候，浏览器会给网页上的每个标签创建这个标签对应的对象。我们可以获取这个对象，来操作对应的标签的一些属性。
+			总结：获取要操作的标签元素对应的对象，通过这个对象来操作这个元素。
+			<font size="100" color="antiquewhite" style="font-family: '宋体'" id="myFont">xzy</font>
+		</div>
+		<p id="three">
+			DOM：文档对象模型（Document Object Model）
+			简述：网页被加载的时候，浏览器会给网页上的每个标签创建这个标签对应的对象。我们可以获取这个对象，来操作对应的标签的一些属性。
+			总结：获取要操作的标签元素对应的对象，通过这个对象来操作这个元素。
+		</p>
+
+	</body>
+</html>
+
+<script type="text/javascript">
+	// 1.获取、设置内容
+	// var p = document.getElementById("three");
+
+	//设置文本内容
+	// p.innerText = "asd";
+
+	//设置添加标签
+	// p.innerHTML = "<font color='red'>xzy</font>";
+
+	// 2.获取、设置属性
+	// var myFont = document.getElementById("myFont");
+	// myFont.setAttribute("color", "aqua");
+	// myFont.setAttribute("style", "font-family: 楷体");
+
+	//3.获取属性值，返回的是字符串
+	var myFont = document.getElementById("myFont");
+	var size = myFont.size;
+	console.log(size);
+	console.log(typeof(size));
+</script>

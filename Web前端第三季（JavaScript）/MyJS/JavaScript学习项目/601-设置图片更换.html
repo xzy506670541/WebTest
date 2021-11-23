@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<style type="text/css">
+			//div设置样式
+			div {
+				width: 900px;
+				height: 500px;
+				margin: 0 auto;
+			}
+
+			//img设置样式
+			div img {
+				width: 500px;
+				height: 400px;
+			}
+		</style>
+
+		<script type="text/javascript">
+			//定时器执行动作
+			window.setTimeout(changeImg, 2000);
+
+			//更改图片
+			function changeImg() {
+				var my_img = document.getElementById("my_img");
+				my_img.src = "./img/海绵宝宝-2.jpeg";
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<img src="img/海绵宝宝-1.jpeg" id="my_img">
+		</div>
+	</body>
+</html>

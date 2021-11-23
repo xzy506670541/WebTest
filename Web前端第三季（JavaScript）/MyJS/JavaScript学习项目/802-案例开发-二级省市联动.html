@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//制作二位数组
+			var arr_province = new Array(5);
+			arr_province[0] = new Array("北京市");
+			arr_province[1] = new Array("合肥市", "芜湖市", "阜阳市"); //数组1是安徽省，里面元素是安徽省的城市
+			arr_province[2] = new Array("郑州市", "洛阳市", "驻马店市");
+			arr_province[3] = new Array("西安市", "宝鸡市", "延安市");
+			arr_province[4] = new Array("菏泽市", "淄博市", "济南市");
+
+			//省份改变
+			function provinceChange(_province) {
+				// console.log(arr_province[_province.value]);
+				var city = document.getElementById("city");
+
+				if (_province.value == "-1") {
+					city.innerHTML = "<option value='-1'>--请选择--</option>";
+					return;
+				}
+
+				city.options.length = 0; //避免数组不断增加
+
+				var arr_city = arr_province[_province.value];
+
+				for (i = 0; i < arr_city.length; i++) {
+					var option_city = document.createElement("option");
+					option_city.innerText = arr_city[i];
+					city.appendChild(option_city);
+				}
+			}
+		</script>
+
+
+	</head>
+	<body>
+		<!-- 下拉列表：省份 -->
+		<select onchange="provinceChange(this)">
+			<option value="-1">--请选择--</option>
+			<option value="0">北京市</option>
+			<option value="1">安徽省</option>
+			<option value="2">河北省</option>
+			<option value="3">陕西省</option>
+			<option value="4">山东省</option>
+		</select>
+
+		<!-- 下拉列表：城市 -->
+		<select id="city">
+			<option value="-1">--请选择--</option>
+			<option></option>
+		</select>
+	</body>
+</html>

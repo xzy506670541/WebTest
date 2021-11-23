@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="" id="my_a">我的CSDN</a>
+
+		<img src="./img/海绵宝宝-1.jpeg" id="my_img">
+
+		<input type="checkbox" id="my_checkbox" />
+
+		<div id="my_div">
+			DOM：文档对象模型（Document Object Model）
+		</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+	var my_a = document.getElementById("my_a");
+	var my_img = document.getElementById("my_img");
+	var my_checkbox = document.getElementById("my_checkbox");
+	var my_div = document.getElementById("my_div");
+
+	//1.方法一：通过setAttribute
+	// my_a.setAttribute("href","https://blog.csdn.net/qq_40544338");
+	// my_img.setAttribute("src","./img/xzy的CSDN主页的二维码.png");
+	// my_checkbox.setAttribute("checked","true");
+
+	//2.方法二：通过点找到属性进行修改
+	my_a.href="https://blog.csdn.net/qq_40544338";
+	my_img.src="./img/xzy的CSDN主页的二维码.png"
+	my_checkbox.checked=true;
+	my_div.style.fontSize="40px";
+	my_div.style.color="chocolate";
+</script>

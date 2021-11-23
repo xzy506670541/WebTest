@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//key value 键值对
+//			user1 = { 
+//				name:"siki",
+//				age:80,
+//				sex:"男"
+//			};
+//			var user1 = new Object();
+//			user1.name="sikiedu";
+//			user1.age=20;
+//			user1.sex="男";
+//			console.log(user1.name);
+//			console.log(user1.age);
+//			console.log(user1.sex);
+//			
+//			user1.name="小明";
+//			console.log(user1.name);
+
+//			user1 = { 
+//				name:"siki",
+//				age:80,
+//				sex:"男"
+//			};
+//			user2={
+//				name:"蓝猫",
+//				age:10,
+//				sex:"女";
+//			};
+			
+			function user(name,age,sex){
+				this.name = name;
+				this.age = age;
+				this.sex = sex;
+				this.show = function (){
+					console.log(this.name+":"+this.age+":"+this.sex);
+				}
+				this.setAge=function(age){
+					this.age = age;
+				}
+			}
+			user3 = new user( "小红",20,"女" );
+			user4 = new user( "李白",40,"男" );
+//			user4.setName = function(name){
+//				this.name = name;
+//			}
+//			console.log(user3.name);
+//			console.log(user3.age);
+//			console.log(user3.sex);
+//			user3.show();
+//			user4.setAge(18);
+//			user4.setName("小乔");
+//			user4.show();
+
+//			console.log(user3.name);
+//			console.log(user3["name"]);
+
+			for( key in user3 ){
+				console.log(key+":"+user3[key]);
+			}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script type="text/javascript">
+			//1.验证QQ号是否为真
+			var p1_1 = /^[1-9]\d+$/;
+			console.log("测试1：" + p1_1.test("132164565"));
+			console.log("测试1：" + p1_1.test("01234"));
+			console.log("测试1：" + p1_1.test("12"));
+			console.log("");
+
+			// 2.验证是否是邮箱
+			var p2_1 = /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/
+			console.log("测试2：" + p2_1.test("506@qq.com"));
+			console.log("测试2：" + p2_1.test("163@163.com"));
+			console.log("测试2：" + p2_1.test("163@XX.com"));
+			console.log("测试2：" + p2_1.test("163@baidu.com"));
+			console.log("");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

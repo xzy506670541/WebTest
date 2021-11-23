@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body onload="init()">
+		<!--通过onclick属性添加事件-->
+		<div onclick="console.log('我被点击了');">DOM事件div</div>
+		<div onclick="divClick()">DOM事件div</div>
+		<span id="myspan">DOM事件span</span>
+		<p onmouseover="console.log('onmouseover')" onmouseout="console.log('鼠标划出')" onmousedown="console.log('鼠标按下')" onmouseup="console.log('鼠标抬起')">DOM事件p</p>
+		<font>DOM事件font</font>
+		<a href="http://www.sikiedu.com">DOM事件a</a>
+		
+		<input type="text" onchange="inputChange(this)" />
+	</body>
+</html>
+<script type="text/javascript">
+	function init(){
+		console.log("网页加载完成");
+	}
+	function inputChange(input){
+		console.log("用户输入的内容发生改变："+input.value);
+	}
+//	function beforeUnload(){
+//		return "你确定要离开了吗";
+//	}
+	function divClick(){
+		console.log("div被点击了");
+	}
+	var myspan = document.getElementById("myspan");
+//	myspan.onclick=function(){
+//		console.log("span被点击了");
+//	}
+//	myspan.addEventListener("click",spanClick);
+//	function spanClick(){
+//		console.log("span被点击了");
+//	}
+	myspan.addEventListener("click",function(){
+		console.log("span被点击了");
+	});
+</script>

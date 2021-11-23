@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//1.按照空格进行截取,参数是空格
+			var str1_1 = "hello world!";
+			var str1_2 = str1_1.split(" ");
+			console.log(str1_2)
+
+			//2.每一个字母都截取,参数是没有
+			var str2_1 = "hello world!";
+			var str2_2 = str2_1.split("");
+			console.log(str2_2)
+
+			// 3.按照逗号进行截取,参数是逗号
+			var str3_1 = "hello,world,xzy,!";
+			var str3_2 = str3_1.split(",");
+			console.log(str3_2)
+
+			// 4.限制返回字符串数组的个数
+			var str4_1 = "hello,world,xzy,!";
+			var str4_2 = str4_1.split(",", 2);
+			console.log(str4_2)
+
+			// 5.去掉字符串前后的空格，中间不管
+			var str5_1 = "    hello,world,xzy,!   "
+			var str5_2 = str5_1.trim();
+			console.log(str5_1);
+			console.log(str5_2);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

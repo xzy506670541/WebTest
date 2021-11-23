@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<style type="text/css">
+			//div设置样式
+			div {
+				width: 900px;
+				height: 500px;
+				margin: 0 auto;
+			}
+
+			//img设置样式
+			div img {
+				width: 900px;
+				height: 500px;
+			}
+		</style>
+
+		<script type="text/javascript">
+			// 初始化:避免未加载完毕，执行动作产生问题，
+			function init() {
+				//1.定时器:执行动作:只会执行一次
+				// window.setTimeout(changeImg, 2000);
+
+				// 2.定时器：重复做事情
+				window.setInterval(changeImg, 2000);
+			}
+			
+			//数组：图片路径
+			var arr_imgPath=new Array(
+			"./img/海绵宝宝-1.jpeg",
+			"./img/海绵宝宝-2.jpeg",
+			"./img/海绵宝宝-3.jpeg"
+			);			
+
+			var img_index = 0;
+
+			//更改图片
+			function changeImg() {
+				nextImg();
+			}
+
+			//点击上一张
+			function preImg() {
+				var my_img = document.getElementById("my_img");
+				img_index--;
+				if (img_index < 0) {
+					img_index = arr_imgPath.length-1;
+				}
+				my_img.src = arr_imgPath[img_index];
+			}
+
+			//点击下一张图片按钮
+			function nextImg() {
+				var my_img = document.getElementById("my_img");
+				img_index++;
+				if (img_index >= arr_imgPath.length) {
+					img_index = 0;
+				}
+				my_img.src = arr_imgPath[img_index];
+			}
+		</script>
+	</head>
+	<body onload="init()">
+		<p align="center">
+			<button type="button" onclick="preImg()">上一张</button>
+			<button type="button" onclick="nextImg()">下一张</button>
+		</p>
+		<div>
+			<img src="img/海绵宝宝-1.jpeg" id="my_img">
+		</div>
+	</body>
+</html>

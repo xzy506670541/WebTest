@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			var p1 = /^a/;
+//			console.log(p1.test("bac"));
+			
+//			var p2 = /a$/;
+//			console.log(p2.test("abca"));
+			
+//			var p3 = /^a$/;
+//			console.log(p3.test("aaa"));
+
+//			var p4 = /^[1234][1234]$/;
+//			var p4 = /[1-4]/;
+//			var p4 = /[a-z]/;
+//			console.log(p4.test("a"));
+//			console.log(p4.test("b"));
+//			console.log(p4.test("3"));
+//			console.log(p4.test("4"));
+//			console.log(p4.test("5"));
+
+//			var p5 = /\d/;
+//			console.log(p5.test("1"));
+//			console.log(p5.test("3"));
+//			console.log(p5.test("0"));
+//			console.log(p5.test("a"));
+
+			//正整数
+			// 1-9 0-9
+//			var p6 = /^[1-9]\d*$/;
+//			console.log(p6.test("0"));
+//			console.log(p6.test("5"));
+//			console.log(p6.test("21"));
+//			console.log(p6.test("430"));
+//			console.log(p6.test("-430"));
+
+			// * +量词
+//			var p7 = /^a+/;
+//			console.log(p7.test("a"));
+//			console.log(p7.test(""));
+//			console.log(p7.test("aa"));
+//			console.log(p7.test("aaa"));
+//			console.log(p7.test("b"));
+
+//			var p8 = /^[1-9][0-9]+$/;
+//			console.log(p8.test("10"));
+//			console.log(p8.test("804632564"));
+//			console.log(p8.test("0"));
+//			console.log(p8.test("089"));
+//			console.log(p8.test("100"));
+			
+			// xxx@xx.com  xx.org xx.net
+			var p9=/^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/;
+			console.log(p9.test("xxx@qq.com"));
+			console.log(p9.test("xxx@qq.net"));
+			console.log(p9.test("xxx@qq.cn"));
+			console.log(p9.test("@qq.cn"));
+			console.log(p9.test("123@baidu.com"));
+			console.log(p9.test("&123@baidu.xcvxcvds"));
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

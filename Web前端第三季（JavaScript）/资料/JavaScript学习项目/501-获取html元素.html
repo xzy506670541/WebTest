@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="one">
+			<span>DOM：文档对象模型（Document Object Model）
+简述：网页被加载的时候，浏览器会给网页上的每个标签创建这个标签对应的对象。我们可以获取这个对象，来操作对应的标签的一些属性。
+总结：获取要操作的标签元素对应的对象，通过这个对象来操作这个元素。</span>
+		</div>
+		<div class="two">
+			<span>DOM：文档对象模型（Document Object Model）
+简述：网页被加载的时候，浏览器会给网页上的每个标签创建这个标签对应的对象。我们可以获取这个对象，来操作对应的标签的一些属性。
+总结：获取要操作的标签元素对应的对象，通过这个对象来操作这个元素。</span>
+		</div>
+		<div class="two" name="last">
+			<span>DOM：文档对象模型（Document Object Model）
+简述：网页被加载的时候，浏览器会给网页上的每个标签创建这个标签对应的对象。我们可以获取这个对象，来操作对应的标签的一些属性。
+总结：获取要操作的标签元素对应的对象，通过这个对象来操作这个元素。</span>
+		</div>
+		
+		<p class="two" name="last" id="three">DOM树（图片）：
+简述：网页就是有标签组成的，标签是层层包裹的（<font id="myfont" size="6" >父标签和子标签</font>），最内存的标签包裹着内容。（文本或者图片）</p>
+
+		<a href="#" id="mya">进入SiKi学院</a>
+		<img src="img/1.png" id="myimg"/>
+		
+		<input type="checkbox" id="mycheckbox" />
+		
+		<div id="mydiv">
+			网页被加载的时候，浏览器会给网页上的每个标签创建这个标签对应的对象。
+		</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+//	var person1;//undefined
+//	var person = null;
+//	person = new Object();
+//	person.name = "siki"
+//	person = null;//空对象  ，没有指向任何对象
+//1,通过id
+//	var div = document.getElementById("one");
+
+//2,通过tagname标签名
+//	var div = document.getElementsByTagName("div");
+//	var div = document.getElementById("one");
+//	var arr1 = div.getElementsByTagName("span");
+//	console.log(arr1);
+
+//3，通过classname类名
+//var div = document.getElementById("one");
+//div.getElementsByClassName("two")
+//	var arr1 = document.getElementsByClassName("two");
+//	console.log(arr1);
+	
+	//4，通过标签的name值来查找
+//	var arr1 = document.getElementsByName("last")
+//	console.log(arr1);
+	
+//	var p = document.getElementById("three");
+//	p.innerText="sikiedu.com";
+//	p.innerHTML="<font color='red'>siki</font>";
+
+//	var myfont = document.getElementById("myfont");
+//	myfont.setAttribute("color","green");
+//	var size = myfont.getAttribute("size");
+//	console.log(typeof(size));
+//	console.log(size);
+	//style="font-family: 幼圆;"
+//	myfont.setAttribute("style","font-family: 幼圆;");
+
+	var mya = document.getElementById("mya");
+	var myimg = document.getElementById("myimg");
+	var mycheckbox = document.getElementById("mycheckbox");
+	
+//	mya.setAttribute("href","http://www.sikiedu.com");
+	mya.href="http://www.sikiedu.com";
+//	myimg.setAttribute("src","img/2.jpg");
+	myimg.src ="img/2.jpg";
+//	mycheckbox.setAttribute("checked","true");
+	mycheckbox.checked=true;
+	
+	mydiv = document.getElementById("mydiv");
+	mydiv.style.fontSize="20px";
+	mydiv.style.color="blueviolet";
+</script>

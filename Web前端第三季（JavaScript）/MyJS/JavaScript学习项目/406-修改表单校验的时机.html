@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function check() {
+
+				var isPass = true; // 是否通过注册
+
+				//验证用户名
+				//document从body中通过指定id名字获取元素。			
+				var userName = document.getElementById("userName");
+				console.log(userName);
+				console.log(userName.value);
+
+				var userNameMsg = document.getElementById("userNameMsg");
+
+				if (userName.value.length < 3 || userName.value.length > 6) {
+					// alert("用户名长度在3到6位!");
+					userNameMsg.innerText = "用户名长度在3到6位!";
+					isPass = false;
+				} else {
+					userNameMsg.innerText = "";
+				}
+
+				// 验证邮箱
+				var email = document.getElementById("email").value;
+				var testP = /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/;
+
+				var emailMsg = document.getElementById("emailMsg");
+
+				if (testP.test(email) == false) {
+					// alert("邮箱格式不正确！");
+					emailMsg.innerText = "邮箱格式不正确";
+					isPass = false;
+				} else {
+					emailMsg.innerText = "";
+				}
+
+				// 验证密码
+				var password = document.getElementById("password").value;
+				var rePassword = document.getElementById("rePassword").value;
+				var passwordMsg = document.getElementById("passwordMsg");
+				var rePasswordMsg = document.getElementById("rePasswordMsg");
+
+				if (password.length < 6 || password.length > 10) {
+					// alert("密码长度在6到10位！");
+					passwordMsg.innerText = "密码长度在6到10位";
+					isPass = false;
+				} else {
+					passwordMsg.innerText = "";
+
+					if (password != rePassword) {
+						// alert("2次输入密码不一致！");
+						rePasswordMsg.innerText = "2次输入密码不一致";
+						isPass = false;
+					} else {
+						rePasswordMsg.innerText = "";
+					}
+				}
+
+				//避免点击提交按钮就跳转，增加return，true表单提交，false表单不提交
+				// return false; 
+				return isPass;
+			}
+
+			// 验证用户名
+			function checkUserName() {
+				var userName = document.getElementById("userName");
+
+				var userNameMsg = document.getElementById("userNameMsg");
+
+				if (userName.value.length < 3 || userName.value.length > 6) {
+					userNameMsg.innerText = "用户名长度在3到6位!";
+				} else {
+					userNameMsg.innerText = "";
+				}
+			}
+
+			function checkUserName(userName) {
+				var userNameMsg = document.getElementById("userNameMsg");
+
+				if (userName.value.length < 3 || userName.value.length > 6) {
+					userNameMsg.innerText = "用户名长度在3到6位!";
+				} else {
+					userNameMsg.innerText = "";
+				}
+			}
+			//验证邮箱
+			function checkEmail(email) {
+				var testP = /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/;
+
+				var emailMsg = document.getElementById("emailMsg");
+
+				if (testP.test(email.value) == false) {
+					// alert("邮箱格式不正确！");
+					emailMsg.innerText = "邮箱格式不正确";
+				} else {
+					emailMsg.innerText = "";
+				}
+			}
+			//验证密码
+			function checkPassword() {
+				var password = document.getElementById("password").value;
+				var rePassword = document.getElementById("rePassword").value;
+				var passwordMsg = document.getElementById("passwordMsg");
+				var rePasswordMsg = document.getElementById("rePasswordMsg");
+
+				if (password.length < 6 || password.length > 10) {
+					// alert("密码长度在6到10位！");
+					passwordMsg.innerText = "密码长度在6到10位";
+					isPass = false;
+				} else {
+					passwordMsg.innerText = "";
+
+					if (password != rePassword) {
+						// alert("2次输入密码不一致！");
+						rePasswordMsg.innerText = "2次输入密码不一致";
+						isPass = false;
+					} else {
+						rePasswordMsg.innerText = "";
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<!-- 
+		1.form onsubmit="check()" 点击提交按钮后，执行的函数check。
+		2.action="regiser.jsp" 当点击提交按钮后，表单提交的路径。
+		3.onsubmit="return check()"避免点击提交按钮就跳转，增加return。
+		-->
+		<form action="regiser.jsp" onsubmit="return check()">
+			<table border="1" width="500" height="500">
+				<tr>
+					<td colspan="2" align="center">注册</td>
+				</tr>
+				<tr>
+					<td align="right">用户名</td>
+					<td align="left">
+						<!-- <input type="text" id="userName" onblur="checkUserName()"> -->
+						<input type="text" id="userName" onblur="checkUserName(this)">
+						<font id="userNameMsg" color="red"></font>
+					</td>
+
+				</tr>
+				<tr>
+					<td align="right">邮箱</td>
+					<td align="left">
+						<input type="text" id="email" onblur="checkEmail(this)">
+						<font color="red" id="emailMsg"></font>
+					</td>
+				</tr>
+				<tr>
+					<td align="right">密码</td>
+					<td align="left">
+						<input type="text" id="password" onblur="checkPassword()">
+						<font color="red" id="passwordMsg"></font>
+					</td>
+				</tr>
+				<tr>
+					<td align="right">重复密码</td>
+					<td align="left">
+						<input type="text" id="rePassword" onblur="checkPassword()">
+						<font color="red" id="rePasswordMsg"></font>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><input type="submit" value="注册"></td>
+				</tr>
+			</table>
+
+	</body>
+</html>

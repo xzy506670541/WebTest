@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<script type="text/javascript">
+			function my_open(){
+				//默认是新的标签页打开
+				// window.open();
+				
+				//打开指定网页，设置网页大小
+				// window.open("https://blog.csdn.net/qq_40544338","new_windows","width=900 height=900")
+				
+				// var my_window=window.open();
+				var my_window=window.open("https://blog.csdn.net/qq_40544338","new_windows","width=1400 height=900")
+				my_window.resizeTo(1400,900);
+				my_window.moveTo(100,1000);//向右移动没有反应
+				my_window.focus();//鼠标焦点在网页上
+			}
+		</script>
+	</head>
+	<body>
+		<button type="button" onclick="my_open()">打开</button>
+	</body>
+</html>

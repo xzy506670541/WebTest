@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script type="text/javascript">
+			//1.字符串：查找
+			str = "hello world!";
+
+			//①如果子串存在，返回子串首字母索引，如果子串不存在，返回-1
+			var index = str.indexOf("0");
+			console.log(index);
+
+			// 2.字符串：拼接
+			var str2 = str.concat(str, "+xzy");
+			console.log(str2);
+
+			//3.字符串：截取
+			var str3 = str.slice(2, 5); //从第二个开始，总共截取5个
+			var str4=str.slice(2);//从第二个开始截取所有的字符
+			var str5=str.slice(5,3);//非法：获得空字符串
+			var str6=str.slice(2,40);//截取数量超过字符串长度，则全部截取
+			var str7=str.slice(-4,-2);//负数：从后往前截取，截取倒数第4个，往右移动俩位
+			
+			console.log(str3);
+			console.log(str4);
+			console.log(str5);
+			console.log(str6);
+			console.log(str7);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="one">
+			DOM：文档对象模型（Document Object Model）
+			简述：网页被加载的时候，浏览器会给网页上的每个标签创建这个标签对应的对象。我们可以获取这个对象，来操作对应的标签的一些属性。
+			总结：获取要操作的标签元素对应的对象，通过这个对象来操作这个元素。
+			<span>
+				DOM：文档对象模型（Document Object Model）
+				简述：网页被加载的时候，浏览器会给网页上的每个标签创建这个标签对应的对象。我们可以获取这个对象，来操作对应的标签的一些属性。
+				总结：获取要操作的标签元素对应的对象，通过这个对象来操作这个元素。
+			</span>
+		</div>
+		<div class="two" name="xzy">
+			DOM：文档对象模型（Document Object Model）
+			简述：网页被加载的时候，浏览器会给网页上的每个标签创建这个标签对应的对象。我们可以获取这个对象，来操作对应的标签的一些属性。
+			总结：获取要操作的标签元素对应的对象，通过这个对象来操作这个元素。
+		</div>
+		<div class="two" name="xzy">
+			DOM：文档对象模型（Document Object Model）
+			简述：网页被加载的时候，浏览器会给网页上的每个标签创建这个标签对应的对象。我们可以获取这个对象，来操作对应的标签的一些属性。
+			总结：获取要操作的标签元素对应的对象，通过这个对象来操作这个元素。
+		</div>
+		<p>
+			DOM：文档对象模型（Document Object Model）
+			简述：网页被加载的时候，浏览器会给网页上的每个标签创建这个标签对应的对象。我们可以获取这个对象，来操作对应的标签的一些属性。
+			总结：获取要操作的标签元素对应的对象，通过这个对象来操作这个元素。
+		</p>
+
+	</body>
+</html>
+
+<script type="text/javascript">
+	// 1.通过id找到元素
+	// var div = document.getElementById("one");
+	// console.log(div);
+
+	// 2.通过标签名字找到元素
+	// var arr_div = document.getElementsByTagName("div");
+	// console.log(arr_div);
+	// var arr_span = document.getElementsByTagName("span");
+	// console.log(arr_span);
+
+	// 3.通过类名找到元素
+	// var arr_class = document.getElementsByClassName("two");
+	// console.log(arr_class);
+	
+	// 4.通过标签的name来查找
+	var arr1=document.getElementsByName("xzy");
+	console.log(arr1);
+</script>
