@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script type="text/javascript" src="js/jQuery/jQuery%20Core%203.3.1-uncompressed.js"></script>
+
+		<style type="text/css">
+			#ad {
+				width: 300px;
+				height: 300px;
+				background-color: antiquewhite;
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				display: none;
+			}
+		</style>
+		<script type="text/javascript">
+			// setTimeout(function() {
+			// 	//1.show：参数：slow、fast、1000
+			// 	//出现：快速
+			// 	// $("#ad").show();
+
+			// 	//2.出现：慢慢的
+			// 	// $("#ad").show("slow");
+
+			// 	//3.出现：持续一段可以控制的时间
+			// 	// $("#ad").show(2000);
+
+			// 	//4.动画播放完毕执行回调函数
+			// 	$("#ad").show(2000, function() {
+			// 		console.log("show动画执行完毕！");
+			// 	});
+
+			// }, 1000);
+
+			// // 5.
+			// setTimeout(function() {
+			// 	//hide:隐藏
+			// 	$("#ad").hide(2000, function() {
+			// 		console.log("动画隐藏了");
+			// 	});
+			// }, 5000);
+
+			// 6.出现广告
+			setTimeout(function() {
+				// $("#ad").toggle();
+				$("#ad").toggle("slow");
+			}, 1000);	
+
+			//点击关闭按钮隐藏广告：通过toggle
+			$(function() {
+				$("#closeBtn").click(function() {
+					// $("#ad").toggle();
+					$("#ad").toggle("slow");
+				});
+			});
+
+			// setTimeout(function(){
+			// 	$("#ad").hide();
+			// },5000)
+
+			// $(function() {
+			// 	$("#closeBtn").click(function() {
+			// 		$("#ad").hide();
+			// 	});
+			// });
+		</script>
+	</head>
+	<body>
+		<div id="ad">
+			<button id="closeBtn">关闭</button>
+		</div>
+	</body>
+</html>

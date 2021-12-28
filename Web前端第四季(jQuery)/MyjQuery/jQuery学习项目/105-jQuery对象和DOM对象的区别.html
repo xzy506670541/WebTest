@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<script type="text/javascript" src="js/jQuery/jQuery%20Core%203.3.1-uncompressed.js"></script>
+		
+		<script type="text/javascript">
+
+		
+		//不使用jQuery无法实现
+		// var div=document.getElementById("one");
+		// div.innerText="不使用jQuery无法实现";
+		
+		 $(function(){
+			 //1.jQuery方法
+			 // $("#one")会返回一个jQury对象
+			 //#one：通过document的id找到标签		
+			 // $("#one").show();//显示		
+			 // $("#one").text("通过jQuery修改了div里面的内容");
+			 
+			 
+			 // 2.DOM方法
+			 //方法一:
+			 // var div=document.getElementById("one");
+			 // div.innerText="方法一:DOM方法修改标签内容";
+			 
+			 //方法二：
+			 // var div=document.getElementById("one").innerText="方法二：DOM方法修改标签内容";
+			 
+			 //方法三：
+			 // document.getElementById("one").innerText="方法三:DOM方法修改标签内容";
+			 
+			 //3.注意：jQuery和DOM对象的属性有区别
+			 // $("#one").innerText="注意：jQuery和DOM对象的属性有区别";
+			 
+			 // 4.jQuery转换为DOM对象,就可以使用DOM对象属性了
+			 $("#one").get(0).innerText="jQuery转换为DOM对象";
+		 })
+			
+		</script>
+	</head>
+	<body>
+		<div id="one">Category: Selectors</div>
+	</body>
+</html>

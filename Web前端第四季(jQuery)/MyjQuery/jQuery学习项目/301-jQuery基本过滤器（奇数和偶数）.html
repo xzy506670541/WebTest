@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script type="text/javascript" src="js/jQuery/jQuery%20Core%203.3.1-uncompressed.js"></script>
+
+		<script type="text/javascript">
+			$(function() {
+				//将偶数行变色
+				$("div:even").css("background-color", "red");
+				//将奇数行变色				
+				$("div:odd").css("background-color", "green");
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			索引 0 Selects odd elements, zero-indexed. See also :even.
+			<div>索引 1 Selects odd elements, zero-indexed. See also :even.</div>
+		</div>
+		<div>索引 2 Selects odd elements, zero-indexed. See also :even.</div>
+		<div>索引 3 Selects odd elements, zero-indexed. See also :even.</div>
+		<div>索引 4 Selects odd elements, zero-indexed. See also :even.</div>
+		<div>索引 5 Selects odd elements, zero-indexed. See also :even.</div>
+	</body>
+</html>

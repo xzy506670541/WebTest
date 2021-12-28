@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript">
+			$(function(){
+//				$("#mytable tbody tr:even").css("background-color","aliceblue");
+//				$("#mytable tbody tr:odd").css("background-color","beige");
+
+//				$("祖先 后代")
+//				$("p>span").css("background-color","red");
+
+				$("#selectBtn").click(function(){//
+//					console.log($("#selectBtn"));//selectBtn对应的jQuery对象
+//					console.log(this);//selectBtn对应的DOM对象
+					$("tbody input[name='select']").prop("checked",this.checked);
+				});
+			});
+			
+		</script>
+	</head>
+	<body>
+		<div><p>
+			Selects <span>all</span> direct child elements specified by “child” of elements specified by “parent”.
+		</p></div>
+		
+		<table id="mytable" border="1" cellspacing="" cellpadding="">
+			
+			<thead>
+				<tr><th> <input type="checkbox" id="selectBtn" /> </th><th>付款方式</th><th>结算方式</th><th>状态</th></tr>
+			</thead>
+			
+			<tbody>
+				<tr><td><input type="checkbox" name="select" /></td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+				<tr><td><input type="checkbox" name="select" /></td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+				<tr><td><input type="checkbox" name="select" /></td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+				<tr><td><input type="checkbox" name="select" /></td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+				<tr><td><input type="checkbox" name="select" /></td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+				<tr><td><input type="checkbox" name="select" /></td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+				<tr><td><input type="checkbox" name="select" /></td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+				<tr><td><input type="checkbox" name="select" /></td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+				<tr><td><input type="checkbox" name="select" /></td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+				<tr><td><input type="checkbox" name="select" /></td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+				<tr><td><input type="checkbox" name="select" /></td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+				<tr><td><input type="checkbox" name="select" /></td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+				<tr><td><input type="checkbox" name="select" /></td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+				<tr><td><input type="checkbox" name="select" /></td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+				<tr><td><input type="checkbox" name="select" /></td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+			</tbody>
+			
+			<tfoot>
+				<tr><td>统计</td><td>统计</td><td>统计</td><td>统计</td></tr>
+			</tfoot>
+			
+		</table>
+			
+		<table border="1" cellspacing="" cellpadding="">
+			<tr><th>收费单位</th><th>付款方式</th><th>结算方式</th><th>状态</th></tr>
+			<tr><td>xxx有限公司</td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+			<tr><td>xxx有限公司</td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+			<tr><td>xxx有限公司</td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+			<tr><td>xxx有限公司</td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+			<tr><td>xxx有限公司</td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+			<tr><td>xxx有限公司</td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+			<tr><td>xxx有限公司</td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+			<tr><td>xxx有限公司</td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+			<tr><td>xxx有限公司</td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+			<tr><td>xxx有限公司</td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+			<tr><td>xxx有限公司</td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+			<tr><td>xxx有限公司</td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+			<tr><td>xxx有限公司</td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+			<tr><td>xxx有限公司</td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+			<tr><td>xxx有限公司</td><td>手机</td><td>支付宝</td><td>已付款</td></tr>
+		</table>
+	</body>
+</html>

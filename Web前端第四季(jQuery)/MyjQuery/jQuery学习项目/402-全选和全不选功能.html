@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+
+		</style>
+
+		<script type="text/javascript" src="js/jQuery/jQuery%20Core%203.3.1-uncompressed.js"></script>
+
+		<script type="text/javascript">
+			$(function() {
+				// $("#myTable tr:even").css("background-color", "aliceblue");
+				// #myTable：祖先选择器：，只对myTable表格起作用
+				//tbody:只对tbody起作用
+				// tr:even：偶数行
+				// tr.odd：基数行
+				// $("#myTable tbody tr:even").css("background-color", "aliceblue");
+				// $("#myTable tr:odd").css("background-color", "beige");
+				// $(祖先 后代)
+				// $("table td").css("background-color", "beige");
+				// $("#myTable td").css("background-color", "beige");
+
+				//后代选择器：不管是儿子、孙子等等都可以，只要是后代就可以
+				// $("div span").css("background-color", "red");
+
+				//儿子：必须是父子关系，不包括孙子等关系
+				// $("div>div").css("background-color", "green");
+				
+				//#selectBtn:找到selectBtn物体，然后添加点击事件，
+				//prop添加状态：和被点击的selectBtn的同样的点击状态
+				$("#selectBtn").click(function(){
+					$("tbody input[name='select']").prop("checked",this.checked);
+				});
+
+			});
+		</script>
+	</head>
+	<body>
+		<div id="">
+			<p>
+				asdad
+				<span id="">
+					all
+				</span>
+			<div>
+				asdqwebsmndbhfkh爱斯达克比那时
+			</div>
+			</p>
+
+		</div>
+
+		<table id="myTable" border="1" cellspacing="" cellpadding="">
+			<!-- thead表头标签 ：让此内容在表的开头-->
+			<thead>
+				<tr>
+					<td><input type="checkbox" name="" id="selectBtn" value="" /></td>
+					<th>收费单位</th>
+					<th>付款方式</th>
+					<th>结算方式</th>
+					<th>状态</th>
+				</tr>
+			</thead>
+
+			<!-- tbody表身体标签 -->
+			<tbody>
+				<tr>
+					<td><input type="checkbox" name="select" id="" value="" /></td>
+					<td>XX有限公司</td>
+					<td>手机</td>
+					<td>支付宝</td>
+					<td>已付款</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="select" id="" value="" /></td>
+					<td>XX有限公司</td>
+					<td>手机</td>
+					<td>支付宝</td>
+					<td>已付款</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="select" id="" value="" /></td>
+					<td>XX有限公司</td>
+					<td>手机</td>
+					<td>支付宝</td>
+					<td>已付款</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="select" id="" value="" /></td>
+					<td>XX有限公司</td>
+					<td>手机</td>
+					<td>支付宝</td>
+					<td>已付款</td>
+				</tr>
+			</tbody>
+
+			<!-- tfoot表尾标签：内容在表的结尾 -->
+			<tfoot>
+				<tr>
+					<td></td>
+					<td>统计</td>
+					<td>统计</td>
+					<td>统计</td>
+					<td>统计</td>
+				</tr>
+			</tfoot>
+
+
+		</table>
+		<table id="" border="1" cellspacing="" cellpadding="">
+			<tr>
+				<th>收费单位</th>
+				<th>付款方式</th>
+				<th>结算方式</th>
+				<th>状态</th>
+			</tr>
+			<tr>
+				<td>XX有限公司</td>
+				<td>手机</td>
+				<td>支付宝</td>
+				<td>已付款</td>
+			</tr>
+			<tr>
+				<td>XX有限公司</td>
+				<td>手机</td>
+				<td>支付宝</td>
+				<td>已付款</td>
+			</tr>
+		</table>
+	</body>
+</html>
